@@ -14,4 +14,15 @@
 4. Changes에 있는 파일중 commit할 파일 옆의 +버튼 눌러 추가하기(Change 옆의 +는 전체선택)
 5. 상단에 있는 V표시 눌러서 Commit 메세지 적고 Commit 하기
 6. Terminal 들어가기(상단 View -> Terminal)
-7. git remote add origin [ 복사한 저장소 주소 ] ----- ex) git remote add origin 
+7. git remote add origin [ 복사한 저장소 주소 ] ----- ex) git remote add origin https://github.com/mucheol/git-start.git (repository들어가서 code에서 주소 복사한거)
+8. git pull origin main --allow-unrelated-histories ----- 원격저장소 항목 로컬저장소로 먼저 떙겨와야 push가능함
+9. git push -u origin master ----- 로컬저장소에 push한 내용 원격 저장소에 반영
+10. 추후 default branch를 main으로 바꾼다면 git push -u origin main
+11. Push한 내용 Github 홈페이지 repository 들어가서 Compare & pull request
+12. 메세지 적고 create pull request
+13. pull request쪽 가면 merge있는데 그거 누르면 병합됨
+
+# 로컬 저장소 default branch를 master에서 main(다른거)으로 바꾸는 방법
+1. ~/.gotconfig 파일 내의 default branch를 직접 변경할 수도 있지만
+2. git config --global init.defaultBranch main으로 main이란 branch로 바꿀 수있음 
+3. 이 설정 이후로는 로컬에서 repository 생성시, default branch는 main으로 설정됨
